@@ -1,91 +1,90 @@
-Probabilistic Latent Semantic Analysis (PLSA)
+# PLSA (Probabilistic Latent Semantic Analysis) 
 
-This is a Python implementation of Probabilistic Latent Semantic Analysis (PLSA) using the Expectation-Maximization (EM) algorithm. The model supports both English and Chinese datasets.
+This is a python implementation of Probabilistic Latent Semantic Analysis using EM algorithm.
 
-Usage
+Support both English and Hindi.
 
-To execute the PLSA algorithm, run the following command:
+# Usage
 
+Execute the following command in the cmd :
+
+```
 python plsa.py [datasetFilePath] [stopwordsFilePath] [K] [maxIteration] [threshold] [topicWordsNum] [docTopicDisFilePath] [topicWordDisFilePath] [dictionaryFilePath] [topicsFilePath]
+```
 
-For example:
+eg. 
 
-python plsa.py dataset.txt stopwords.dic 10 30 1.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt
+```
+python plsa.py dataset.txt stopwords.dic 10 30 1.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
+```
 
-You can also omit the parameters to use default values specified in plsa.py:
+or omit the params using default values specified in plsa.py :
 
+```
 python plsa.py
+```
 
-Parameter Descriptions
+The meaning of params are given as following:
 
-| Param                    | Description                                                         |
-|--------------------------|---------------------------------------------------------------------|
-| datasetFilePath           | Path to the dataset file                                            |
-| stopwordsFilePath         | Path to the stopwords file                                          |
-| K                         | Number of topics                                                    |
-| maxIteration              | Maximum number of iterations for the EM algorithm                   |
-| threshold                 | Threshold for convergence based on log likelihood                   |
-| topicWordsNum             | Number of top words for each topic                                  |
-| docTopicDisFilePath       | Path to output document-topic distribution                          |
-| topicWordDisFilePath      | Path to output topic-word distribution                              |
-| dictionaryFilePath        | Path to output the dictionary                                        |
-| topicsFilePath            | Path to output the top words of each topic                          |
+|param|description|
+|:---:|:---------:|
+|datasetFilePath|the file path of dataset|
+|stopwordsFilePath|the file path of stopwords|
+|K|the number of topic|
+|maxIteration|the max number of iteration of EM algorithm|
+|threshold|the threshold to judge the convergence of log likelihood|
+|topicWordsNum|the number of top words of each topic|
+|docTopicDisFilePath|the file path to output document-topic distribution|
+|topicWordDistribution|the file path to output topic-word distribution|
+|dictionaryFilePath|the file path to output dictionary|
+|topicsFilePath|the file path to output top words of each topic|
 
-Input Format
+# Format of inputs
 
-- Dataset File: Each line represents a document.
-- Stopwords File: Each line contains a stopword.
+In the dataset file, each line represents a document.
 
-Sample Datasets
+In the stopwords file, each line represents a stopword.
 
-Dataset 1 (English)
-This dataset contains 16 documents from Wikipedia about a particular topic.
+# Samples
 
-To run the model:
+## Dataset 1(English)
 
-python plsa.py dataset1.txt stopwords.dic 10 20 1.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt
+The dataset is multiple documents in one piece from Wikipedia.
 
-The result will show the top words for each topic.
+The result of top words is given as :
 
-Dataset 2 (English)
-This dataset contains 100 documents from the Associated Press.
+![sample1](https://github.com/laserwave/PLSA/blob/master/images/sample1.png)
 
-To run the model:
+The params are set as :
 
-python plsa.py dataset2.txt stopwords.dic 10 20 50.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt
+```
+python plsa.py dataset1.txt stopwords.dic 10 20 1.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
+```
 
-Dataset 3 (Chinese)
-This dataset contains 50 documents from Sina.
+## Dataset 2(English)
 
-To run the model:
+The second dataset is 100 documents from the Associated Press.
 
-python plsa.py dataset3.txt stopwords.dic 30 30 10.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt
+The result of top words is given as :
 
-Output Files
+![sample2](https://github.com/laserwave/PLSA/blob/master/images/sample2.png)
 
-1. Document-Topic Distribution: Distribution of topics for each document.
-2. Topic-Word Distribution: Distribution of words for each topic.
-3. Dictionary: The vocabulary used in the dataset.
-4. Top Words: The top words of each topic.
+The params are set as :
 
-License
+```
+python plsa.py dataset2.txt stopwords.dic 10 20 50.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
+```
 
-Copyright 2016 ZhikaiZhang
+## Dataset 3(Chinese)
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+The third dataset is 50 documents from sina.
 
-   http://www.apache.org/licenses/LICENSE-2.0
+The result of top words is given as :
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+![sample3](https://github.com/laserwave/PLSA/blob/master/images/sample3.png)
 
-Author
+The params are set as :
 
-- Zhikai Zhang  
-  Email: zhangzhikai@seu.edu.cn  
-  Blog: http://zhikaizhang.cn
+```
+python plsa.py primates.txt stopwords.dic 30 30 10.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
+```
