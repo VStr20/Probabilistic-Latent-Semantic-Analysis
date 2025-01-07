@@ -49,36 +49,29 @@ In the stopwords file, each line represents a stopword.
 
 ## Dataset 1(English)
 
-The dataset is multiple documents in one piece from Wikipedia.
-
-The result of top words is given as :
-
-![sample1](https://github.com/laserwave/PLSA/blob/master/images/sample1.png)
+The dataset is multiple documents about mammals in one piece from Wikipedia.
 
 The params are set as :
 
 ```
-python plsa.py dataset1.txt stopwords.dic 10 20 1.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
+python plsa.py mammals.txt stopwords.dic 10 20 1.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
 ```
 
 ## Dataset 2(English)
 
-The second dataset is 100 documents from the Associated Press.
-
-The result of top words is given as :
-
-![sample2](https://github.com/laserwave/PLSA/blob/master/images/sample2.png)
+The second dataset is multiple documents about primates from Wikipedia.
 
 The params are set as :
 
 ```
-python plsa.py dataset2.txt stopwords.dic 10 20 50.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
+python plsa.py primates.txt stopwords.dic 10 20 50.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
 ```
 
 ## Dataset 3(Hindi)
 
+The Hindi dataset is multiple documents about Chandrayan 3 from Wikipedia.
 The params are set as :
 
 ```
-python plsa.py primates.txt stopwords.dic 30 30 10.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
+python plsa.py hindi.txt stopwords.dic 30 30 10.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
 ```
