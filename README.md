@@ -75,13 +75,7 @@ The params are set as :
 python plsa.py dataset2.txt stopwords.dic 10 20 50.0 10 doctopic.txt topicword.txt dictionary.dic topics.txt 
 ```
 
-## Dataset 3(Chinese)
-
-The third dataset is 50 documents from sina.
-
-The result of top words is given as :
-
-![sample3](https://github.com/laserwave/PLSA/blob/master/images/sample3.png)
+## Dataset 3(Hindi)
 
 The params are set as :
 
