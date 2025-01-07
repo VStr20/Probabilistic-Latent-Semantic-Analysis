@@ -70,6 +70,7 @@ python plsa.py primates.txt stopwords.dic 10 20 50.0 10 doctopic.txt topicword.t
 ## Dataset 3(Hindi)
 
 The Hindi dataset is multiple documents about Chandrayan 3 from Wikipedia.
+
 The params are set as :
 
 ```
